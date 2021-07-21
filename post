@@ -24,12 +24,13 @@ pipeline {
 		}
 		 steps {
 			 echo "DEPLOY TO PRODUCTION ENVIRONMENT"
-			 sh 'sleep 5'					   
+			 sh 'sleep 5'
+			 sh 'exit 1'
                      }
                   }
 	}
 	post {
-		always {
+		fail {
 			echo "this is $DEPLOY_TO"
 		}
 	}
