@@ -15,6 +15,7 @@ pipeline {
 			 steps {
 				echo "DEPLOY TO TEST ENVIRONMENT"
 				sh 'sleep 5'
+				sh 'exit 1'
 			}
 		}
 		stage('DEPLOY_PROD') {
